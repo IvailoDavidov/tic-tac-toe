@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="src/app.js" type="module"></script>
+</head>
+
+<body>
+    <h1>Tic-Tac-Toe</h1>
+
+
+    <div id="init">
+        <h2>Please Select</h2>
+        <form id="init-form">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Room name</span>
+                <input type="text" placeholder="Room name" name="room" style="position:relative; left:5px; top:2px">
+               
+            </div>    
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">nickname</span>
+                <input type="text" placeholder="nickname" name="nickname" style="position:relative; left:20px; top:5px">
+            </div>       
+            <input type="submit" value="Enter room" style="position:relative; left:190px; top:10px">
+        </form>
+    </div>
+
+    <div id="chat" style="display: none">
+        <textarea id="textboard" rows="10" cols="50" style="position:relative; left:250px; top:150px; background-color:rgb(197, 232, 252);"></textarea>
+        <div>
+            <input type="text" id="message" placeholder="message..." style="position:relative; left:250px; top:150px;">
+            <button id="send" style="position:relative; left:250px; top:150px;">Send</button>
+        </div>
+    </div>
+
+    <div id="board">
+        <div class="row">
+            <div id="00" class="cell"></div>
+            <div id="01" class="cell"></div>
+            <div id="02" class="cell"></div>
+        </div>
+        <div class="row">
+            <div id="10" class="cell"></div>
+            <div id="11" class="cell"></div>
+            <div id="12" class="cell"></div>
+        </div>
+        <div class="row">
+            <div id="20" class="cell"></div>
+            <div id="21" class="cell"></div>
+            <div id="22" class="cell"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
